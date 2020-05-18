@@ -20,7 +20,6 @@ struct ProfilePropertyValues {
     let Adress: String?
     let Country: String?
     let City: String?
-    
 }
 
 class NutritionistProfileViewController: UIViewController {
@@ -67,7 +66,7 @@ class NutritionistProfileViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-            ])
+        ])
     }
 }
 
@@ -105,7 +104,6 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NutritionistProfileViewCell
         let profilePropertyNames = ProfilePropertyNames.allCases[indexPath.row]
         let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221657342", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
-        
         cell.configure(for: profilePropertyNames, valueType: profilePropertyValues)
         cell.delegate = self
         return cell
