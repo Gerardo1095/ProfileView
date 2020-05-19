@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */; };
+		AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */; };
 		AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9FC2102472188700A59641 /* AppDelegate.swift */; };
 		AF9FC2162472188700A59641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2142472188700A59641 /* Main.storyboard */; };
 		AF9FC2182472188C00A59641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2172472188C00A59641 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyValues.swift; sourceTree = "<group>"; };
+		AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyName.swift; sourceTree = "<group>"; };
 		AF9FC20D2472188700A59641 /* NutritionistView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionistView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9FC2102472188700A59641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9FC2152472188700A59641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF746E4224739B01009BD539 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		AF746E4324739B14009BD539 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		AF746E4424739B41009BD539 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AF9FC223247218FB00A59641 /* NutritionistProfileViewController.swift */,
+				AF9FC2252472192900A59641 /* NutritionistView.swift */,
+				AF9FC2272472195A00A59641 /* NutritionistProfilViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		AF9FC2042472188700A59641 = {
 			isa = PBXGroup;
 			children = (
@@ -76,9 +106,9 @@
 		AF9FC222247218AF00A59641 /* NutritionistProfile */ = {
 			isa = PBXGroup;
 			children = (
-				AF9FC223247218FB00A59641 /* NutritionistProfileViewController.swift */,
-				AF9FC2252472192900A59641 /* NutritionistView.swift */,
-				AF9FC2272472195A00A59641 /* NutritionistProfilViewCell.swift */,
+				AF746E4424739B41009BD539 /* Profile */,
+				AF746E4224739B01009BD539 /* Enum */,
+				AF746E4324739B14009BD539 /* Struct */,
 			);
 			path = NutritionistProfile;
 			sourceTree = "<group>";
@@ -166,9 +196,11 @@
 				AF9FC2282472195A00A59641 /* NutritionistProfilViewCell.swift in Sources */,
 				AF9FC22B24721A5000A59641 /* GradientImageView.swift in Sources */,
 				AF9FC22D24721A7A00A59641 /* UIColo+Hex.swift in Sources */,
+				AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */,
 				AF9FC224247218FB00A59641 /* NutritionistProfileViewController.swift in Sources */,
 				AF9FC2262472192900A59641 /* NutritionistView.swift in Sources */,
 				AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */,
+				AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

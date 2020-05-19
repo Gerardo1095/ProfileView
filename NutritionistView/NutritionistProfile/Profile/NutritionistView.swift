@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NutritionistView: UIView {
+final class NutritionistHeaderView: UIView {
     
     //MARK: - Variables and Constants
     private let gradientColor: CAGradientLayer = {
@@ -36,7 +36,7 @@ class NutritionistView: UIView {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Armando Casas"
+        //label.text = "Armando Casas"
         label.textAlignment = .center
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +45,7 @@ class NutritionistView: UIView {
     
     private let jobLabel: UILabel = {
         let label = UILabel()
-        label.text = "\("I`ve been helping people to obtain ther dream body for 15 years. Lorem Ipsum.")"
+        //label.text = "\("I`ve been helping people to obtain ther dream body for 15 years. Lorem Ipsum.")"
         label.font = label.font.withSize(13)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
@@ -94,6 +94,11 @@ class NutritionistView: UIView {
             jobLabel.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -10),
             jobLabel.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 0)
             ])
+    }
+    
+    func configure(title: ProfilePropertyValues) {
+        nameLabel.text = title.name
+        jobLabel.text = title.jobDescription
     }
     
     //MARK: Actions

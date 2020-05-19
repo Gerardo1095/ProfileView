@@ -8,19 +8,17 @@
 
 import UIKit
 
-struct ProfilePropertyValues {
-    let Email: String?
-    let Phone: String?
-    let Schdule: String?
-    let Adress: String?
-    let Country: String?
-    let City: String?
-}
-
-class NutritionistProfileViewController: UIViewController {
+final class NutritionistProfileViewController: UIViewController {
     
     //MARK: - Variables and Constants
     private lazy var profileView = NutritionistView(frame: CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: 300)))
+    
+    private let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com",
+                                                              Phone: "6221657342",
+                                                              Schdule: "9:00 AM - 3:00 PM",
+                                                              Adress: "Gerardo1095",
+                                                              Country: "Mexico",
+                                                              City: "Sonora")
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -54,7 +52,6 @@ class NutritionistProfileViewController: UIViewController {
     private func setUpView() {
         view.backgroundColor = .white
         view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -92,13 +89,12 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ProfilePropertyNames.allCases.count
+        return ProfilePropertyName.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NutritionistProfileViewCell
-        let profilePropertyNames = ProfilePropertyNames.allCases[indexPath.row]
-        let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221657342", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
+        let profilePropertyNames = ProfilePropertyName.allCases[indexPath.row]
         cell.configure(for: profilePropertyNames, valueType: profilePropertyValues)
         cell.delegate = self
         return cell

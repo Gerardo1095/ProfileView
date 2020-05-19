@@ -8,15 +8,6 @@
 
 import UIKit
 
-enum ProfilePropertyNames: String, CaseIterable {
-    case Email
-    case Phone
-    case Schdule
-    case Adress
-    case Country
-    case City
-}
-
 protocol NutritionistProfileViewDelegate: AnyObject {
     func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, phone numberPhone: UILabel,  pressed phoneButton: UIButton)
 }
@@ -70,6 +61,7 @@ final class NutritionistProfileViewCell: UITableViewCell {
     private func setUpLayout() {
         contentView.addSubview(titleLabel)
         contentView.addSubview(valueLabel)
+        contentView.addSubview(phoneButton)
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
@@ -81,34 +73,32 @@ final class NutritionistProfileViewCell: UITableViewCell {
             valueLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             valueLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             valueLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-            valueLabel.heightAnchor.constraint(equalToConstant: 25)
+            valueLabel.heightAnchor.constraint(equalToConstant: 25),
+            
+            phoneButton.topAnchor.constraint(equalTo: valueLabel.topAnchor),
+            phoneButton.leadingAnchor.constraint(equalTo: valueLabel.trailingAnchor, constant: -120),
+            phoneButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            phoneButton.bottomAnchor.constraint(equalTo: valueLabel.bottomAnchor)
             ])
     }
-    
-    func configure(for titleType: ProfilePropertyNames, valueType: ProfilePropertyValues) {
+    func configure(for titleType: ProfilePropertyName, valueType: ProfilePropertyValues) {
         titleLabel.text = titleType.rawValue
         
+        phoneButton.isHidden = true
         switch titleType {
         case .Email:
-            valueLabel.text = valueType.Email
+            valueLabel.text = valueType.email
         case .Phone:
-            valueLabel.text = valueType.Phone
-            contentView.addSubview(phoneButton)
-            
-            NSLayoutConstraint.activate([
-                phoneButton.topAnchor.constraint(equalTo: valueLabel.topAnchor),
-                phoneButton.leadingAnchor.constraint(equalTo: valueLabel.trailingAnchor, constant: -120),
-                phoneButton.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-                phoneButton.bottomAnchor.constraint(equalTo: valueLabel.bottomAnchor)
-                ])
+            valueLabel.text = valueType.phone
+            phoneButton.isHidden = false
         case .Schdule:
-            valueLabel.text = valueType.Schdule
+            valueLabel.text = valueType.schdule
         case .Adress:
-            valueLabel.text = valueType.Adress
+            valueLabel.text = valueType.adress
         case .Country:
-            valueLabel.text = valueType.Country
+            valueLabel.text = valueType.country
         case .City:
-            valueLabel.text = valueType.City
+            valueLabel.text = valueType.city
         }
     }
     
