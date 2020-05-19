@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct TitleValue {
-    let title: String
-    let value: String
-}
-
 struct ProfilePropertyValues {
     let Email: String?
     let Phone: String?
@@ -103,7 +98,7 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NutritionistProfileViewCell
         let profilePropertyNames = ProfilePropertyNames.allCases[indexPath.row]
-        let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221160443", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
+        let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221657342", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
         cell.configure(for: profilePropertyNames, valueType: profilePropertyValues)
         cell.delegate = self
         return cell

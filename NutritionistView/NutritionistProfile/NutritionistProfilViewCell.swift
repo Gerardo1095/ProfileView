@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol NutritionistProfileViewDelegate: AnyObject {
-    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, phone numberPhone: UILabel,  pressed phoneButton: UIButton)
-}
-
 enum ProfilePropertyNames: String, CaseIterable {
     case Email
     case Phone
@@ -19,6 +15,10 @@ enum ProfilePropertyNames: String, CaseIterable {
     case Adress
     case Country
     case City
+}
+
+protocol NutritionistProfileViewDelegate: AnyObject {
+    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, phone numberPhone: UILabel,  pressed phoneButton: UIButton)
 }
 
 final class NutritionistProfileViewCell: UITableViewCell {
