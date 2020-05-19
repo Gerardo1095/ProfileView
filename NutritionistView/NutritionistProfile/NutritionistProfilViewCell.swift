@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NutritionistProfileViewDelegate: AnyObject {
-    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, pressed phoneButton: UIButton)
+    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, phone numberPhone: UILabel,  pressed phoneButton: UIButton)
 }
 
 enum ProfilePropertyNames: String, CaseIterable {
@@ -21,7 +21,7 @@ enum ProfilePropertyNames: String, CaseIterable {
     case City
 }
 
-class NutritionistProfileViewCell: UITableViewCell {
+final class NutritionistProfileViewCell: UITableViewCell {
     
     //MARK: - Variables and Constants
     weak var delegate: NutritionistProfileViewDelegate?
@@ -114,7 +114,7 @@ class NutritionistProfileViewCell: UITableViewCell {
     
     //MARK: Actions
     @objc private func callButtonPressed() {
-        delegate?.titleValueTableViewCell(self, pressed: phoneButton)
+        delegate?.titleValueTableViewCell(self, phone: valueLabel, pressed: phoneButton)
     }
 }
 

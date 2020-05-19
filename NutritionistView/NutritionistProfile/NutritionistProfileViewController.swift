@@ -103,7 +103,7 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NutritionistProfileViewCell
         let profilePropertyNames = ProfilePropertyNames.allCases[indexPath.row]
-        let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221657342", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
+        let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com", Phone: "6221160443", Schdule: "9:00 AM - 3:00 PM", Adress: "Gerardo1095", Country: "Mexico", City: "Sonora")
         cell.configure(for: profilePropertyNames, valueType: profilePropertyValues)
         cell.delegate = self
         return cell
@@ -112,9 +112,9 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
 
 //MARK: - NutritionistProfileViewDelegate
 extension NutritionistProfileViewController: NutritionistProfileViewDelegate {
-    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, pressed phoneButton: UIButton) {
-        let number = "6221657342"
-        guard let numberPhone = URL(string: "tel://\(number)") else { return }
+    func titleValueTableViewCell(_ tableViewCell: NutritionistProfileViewCell, phone numberPhone: UILabel, pressed phoneButton: UIButton) {
+        let number = numberPhone.text
+        guard let numberPhone = URL(string: "tel://\(number!)") else { return }
         UIApplication.shared.open(numberPhone)
         print(numberPhone)
     }
