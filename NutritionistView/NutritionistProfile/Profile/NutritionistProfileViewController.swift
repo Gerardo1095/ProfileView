@@ -13,6 +13,8 @@ final class NutritionistProfileViewController: UIViewController {
     //MARK: - Variables and Constants
     private lazy var profileView = NutritionistHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: 300)))
     
+    private lazy var headerView = TitleHeaderView()
+    
     private let profilePropertyValues = ProfilePropertyValues(name: "Gerardo Mendoza",
                                                               jobDescription: "iOS Developer",
                                                               email: "Gerardo@hotmail.com",
@@ -20,7 +22,8 @@ final class NutritionistProfileViewController: UIViewController {
                                                               schdule: "9:00 AM - 3:00 PM",
                                                               adress: "Gerardo1095",
                                                               country: "Mexico",
-                                                              city: "Sonora")
+                                                              city: "Sonora",
+                                                              contact: "Contact")
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -48,7 +51,9 @@ final class NutritionistProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
-        profileView.configure(headerView: profilePropertyValues)
+        profileView.configure(nameAndJob: profilePropertyValues)
+        headerView.configureHeaderView(headerView: profilePropertyValues)
+        
     }
     
     //MARK: - Functions
@@ -72,23 +77,8 @@ extension NutritionistProfileViewController: UITableViewDelegate, UITableViewDat
         return 1
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let title = UILabel()
-        title.text = "Contact"
-        title.font = title.font.withSize(25)
-        view.tintColor = .clear
-        title.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(title)
-        NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
-            title.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
-            title.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
-            title.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -5)
-            ])
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return " "
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

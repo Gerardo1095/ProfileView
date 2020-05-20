@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */; };
 		AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */; };
+		AF746E482474DCBF009BD539 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E472474DCBF009BD539 /* TitleHeaderView.swift */; };
 		AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9FC2102472188700A59641 /* AppDelegate.swift */; };
 		AF9FC2162472188700A59641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2142472188700A59641 /* Main.storyboard */; };
 		AF9FC2182472188C00A59641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2172472188C00A59641 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyValues.swift; sourceTree = "<group>"; };
 		AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyName.swift; sourceTree = "<group>"; };
+		AF746E472474DCBF009BD539 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		AF9FC20D2472188700A59641 /* NutritionistView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionistView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9FC2102472188700A59641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9FC2152472188700A59641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				AF9FC223247218FB00A59641 /* NutritionistProfileViewController.swift */,
 				AF9FC2252472192900A59641 /* NutritionistView.swift */,
 				AF9FC2272472195A00A59641 /* NutritionistProfilViewCell.swift */,
+				AF746E472474DCBF009BD539 /* TitleHeaderView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				AF9FC224247218FB00A59641 /* NutritionistProfileViewController.swift in Sources */,
 				AF9FC2262472192900A59641 /* NutritionistView.swift in Sources */,
 				AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */,
+				AF746E482474DCBF009BD539 /* TitleHeaderView.swift in Sources */,
 				AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

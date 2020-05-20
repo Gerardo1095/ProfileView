@@ -17,4 +17,5 @@ struct ProfilePropertyValues {
     let adress: String?
     let country: String?
     let city: String?
+    let contact: String?
 }

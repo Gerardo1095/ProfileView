@@ -36,7 +36,6 @@ final class NutritionistHeaderView: UIView {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        //label.text = "Armando Casas"
         label.textAlignment = .center
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +44,6 @@ final class NutritionistHeaderView: UIView {
     
     private let jobLabel: UILabel = {
         let label = UILabel()
-        //label.text = "\("I`ve been helping people to obtain ther dream body for 15 years. Lorem Ipsum.")"
         label.font = label.font.withSize(13)
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
@@ -96,9 +94,9 @@ final class NutritionistHeaderView: UIView {
             ])
     }
     
-    func configure(headerView: ProfilePropertyValues) {
-        nameLabel.text = title.name
-        jobLabel.text = title.jobDescription
+    func configure(nameAndJob: ProfilePropertyValues) {
+        nameLabel.text = nameAndJob.name
+        jobLabel.text  = nameAndJob.jobDescription
     }
     
     //MARK: Actions
