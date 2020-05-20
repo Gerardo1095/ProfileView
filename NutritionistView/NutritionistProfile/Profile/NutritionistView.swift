@@ -96,7 +96,7 @@ final class NutritionistHeaderView: UIView {
             ])
     }
     
-    func configure(title: ProfilePropertyValues) {
+    func configure(headerView: ProfilePropertyValues) {
         nameLabel.text = title.name
         jobLabel.text = title.jobDescription
     }

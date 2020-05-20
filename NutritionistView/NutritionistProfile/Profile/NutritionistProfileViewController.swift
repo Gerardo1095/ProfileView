@@ -11,14 +11,16 @@ import UIKit
 final class NutritionistProfileViewController: UIViewController {
     
     //MARK: - Variables and Constants
-    private lazy var profileView = NutritionistView(frame: CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: 300)))
+    private lazy var profileView = NutritionistHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: view.frame.width, height: 300)))
     
-    private let profilePropertyValues = ProfilePropertyValues(Email: "Gerardo@hotmail.com",
-                                                              Phone: "6221657342",
-                                                              Schdule: "9:00 AM - 3:00 PM",
-                                                              Adress: "Gerardo1095",
-                                                              Country: "Mexico",
-                                                              City: "Sonora")
+    private let profilePropertyValues = ProfilePropertyValues(name: "Gerardo Mendoza",
+                                                              jobDescription: "iOS Developer",
+                                                              email: "Gerardo@hotmail.com",
+                                                              phone: "6221657342",
+                                                              schdule: "9:00 AM - 3:00 PM",
+                                                              adress: "Gerardo1095",
+                                                              country: "Mexico",
+                                                              city: "Sonora")
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -46,6 +48,7 @@ final class NutritionistProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        profileView.configure(headerView: profilePropertyValues)
     }
     
     //MARK: - Functions
