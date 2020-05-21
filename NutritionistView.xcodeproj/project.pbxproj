@@ -10,6 +10,7 @@
 		AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */; };
 		AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */; };
 		AF746E482474DCBF009BD539 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E472474DCBF009BD539 /* TitleHeaderView.swift */; };
+		AF746E5024762DE9009BD539 /* NutritFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4F24762DE9009BD539 /* NutritFont.swift */; };
 		AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9FC2102472188700A59641 /* AppDelegate.swift */; };
 		AF9FC2162472188700A59641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2142472188700A59641 /* Main.storyboard */; };
 		AF9FC2182472188C00A59641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2172472188C00A59641 /* Assets.xcassets */; };
@@ -25,6 +26,11 @@
 		AF746E3E247399D6009BD539 /* ProfilePropertyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyValues.swift; sourceTree = "<group>"; };
 		AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePropertyName.swift; sourceTree = "<group>"; };
 		AF746E472474DCBF009BD539 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		AF746E4A24762D2B009BD539 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		AF746E4B24762D2B009BD539 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AF746E4C24762D2B009BD539 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		AF746E4D24762D2B009BD539 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		AF746E4F24762DE9009BD539 /* NutritFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritFont.swift; sourceTree = "<group>"; };
 		AF9FC20D2472188700A59641 /* NutritionistView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionistView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9FC2102472188700A59641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9FC2152472188700A59641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +82,26 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		AF746E4924762CF6009BD539 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF746E4A24762D2B009BD539 /* Roboto-Bold.ttf */,
+				AF746E4D24762D2B009BD539 /* Roboto-Light.ttf */,
+				AF746E4C24762D2B009BD539 /* Roboto-Medium.ttf */,
+				AF746E4B24762D2B009BD539 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF746E4E24762DBF009BD539 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF9FC22C24721A7A00A59641 /* UIColo+Hex.swift */,
+				AF746E4F24762DE9009BD539 /* NutritFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF9FC2042472188700A59641 = {
 			isa = PBXGroup;
 			children = (
@@ -119,8 +145,9 @@
 		AF9FC22924721A2100A59641 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AF746E4E24762DBF009BD539 /* Extensions */,
+				AF746E4924762CF6009BD539 /* Fonts */,
 				AF9FC22A24721A5000A59641 /* GradientImageView.swift */,
-				AF9FC22C24721A7A00A59641 /* UIColo+Hex.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,6 +231,7 @@
 				AF9FC2262472192900A59641 /* NutritionistView.swift in Sources */,
 				AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */,
 				AF746E482474DCBF009BD539 /* TitleHeaderView.swift in Sources */,
+				AF746E5024762DE9009BD539 /* NutritFont.swift in Sources */,
 				AF746E3F247399D6009BD539 /* ProfilePropertyValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

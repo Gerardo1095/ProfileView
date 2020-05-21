@@ -37,6 +37,7 @@ final class NutritionistHeaderView: UIView {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.font = .bold()
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -49,6 +50,7 @@ final class NutritionistHeaderView: UIView {
         label.minimumScaleFactor = 0.5
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.font = .bold()
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

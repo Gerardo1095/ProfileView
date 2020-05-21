@@ -14,6 +14,7 @@ final class TitleHeaderView: UIView {
     private let contactLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.font = .bold(ofSize: 25)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

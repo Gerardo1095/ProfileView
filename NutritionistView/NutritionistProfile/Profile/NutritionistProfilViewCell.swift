@@ -20,7 +20,7 @@ final class NutritionistProfileViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = label.font.withSize(17)
+        label.font = .bold(ofSize: 17)
         label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,7 +29,7 @@ final class NutritionistProfileViewCell: UITableViewCell {
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = label.font.withSize(20)
+        label.font = .medium(ofSize: 20)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
