@@ -29,6 +29,7 @@ final class TitleHeaderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
     //MARK: - Funcitons
     private func setUpView() {
         addSubview(contactLabel)
@@ -40,6 +41,7 @@ final class TitleHeaderView: UIView {
            contactLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
             ])
     }
+    
     func configureHeaderView(headerView: ProfilePropertyValues) {
         contactLabel.text = headerView.contact
     }

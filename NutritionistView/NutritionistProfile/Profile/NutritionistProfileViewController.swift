@@ -53,7 +53,6 @@ final class NutritionistProfileViewController: UIViewController {
         setUpView()
         profileView.configure(nameAndJob: profilePropertyValues)
         headerView.configureHeaderView(headerView: profilePropertyValues)
-        
     }
     
     //MARK: - Functions

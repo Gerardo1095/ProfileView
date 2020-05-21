@@ -81,6 +81,7 @@ final class NutritionistProfileViewCell: UITableViewCell {
             phoneButton.bottomAnchor.constraint(equalTo: valueLabel.bottomAnchor)
             ])
     }
+    
     func configure(for titleType: ProfilePropertyName, valueType: ProfilePropertyValues) {
         titleLabel.text = titleType.rawValue.capitalizingFirstLetter()
         
