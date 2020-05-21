@@ -82,22 +82,22 @@ final class NutritionistProfileViewCell: UITableViewCell {
             ])
     }
     func configure(for titleType: ProfilePropertyName, valueType: ProfilePropertyValues) {
-        titleLabel.text = titleType.rawValue
+        titleLabel.text = titleType.rawValue.capitalizingFirstLetter()
         
         phoneButton.isHidden = true
         switch titleType {
-        case .Email:
+        case .email:
             valueLabel.text = valueType.email
-        case .Phone:
+        case .phone:
             valueLabel.text = valueType.phone
             phoneButton.isHidden = false
-        case .Schdule:
+        case .schdule:
             valueLabel.text = valueType.schdule
-        case .Adress:
+        case .adress:
             valueLabel.text = valueType.adress
-        case .Country:
+        case .country:
             valueLabel.text = valueType.country
-        case .City:
+        case .city:
             valueLabel.text = valueType.city
         }
     }

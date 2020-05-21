@@ -11,6 +11,7 @@
 		AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4024739AAF009BD539 /* ProfilePropertyName.swift */; };
 		AF746E482474DCBF009BD539 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E472474DCBF009BD539 /* TitleHeaderView.swift */; };
 		AF746E5024762DE9009BD539 /* NutritFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E4F24762DE9009BD539 /* NutritFont.swift */; };
+		AF746E522476313D009BD539 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF746E512476313D009BD539 /* String+Extension.swift */; };
 		AF9FC2112472188700A59641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9FC2102472188700A59641 /* AppDelegate.swift */; };
 		AF9FC2162472188700A59641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2142472188700A59641 /* Main.storyboard */; };
 		AF9FC2182472188C00A59641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9FC2172472188C00A59641 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		AF746E4C24762D2B009BD539 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		AF746E4D24762D2B009BD539 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		AF746E4F24762DE9009BD539 /* NutritFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritFont.swift; sourceTree = "<group>"; };
+		AF746E512476313D009BD539 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AF9FC20D2472188700A59641 /* NutritionistView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionistView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9FC2102472188700A59641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF9FC2152472188700A59641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				AF9FC22C24721A7A00A59641 /* UIColo+Hex.swift */,
 				AF746E4F24762DE9009BD539 /* NutritFont.swift */,
+				AF746E512476313D009BD539 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9FC2282472195A00A59641 /* NutritionistProfilViewCell.swift in Sources */,
+				AF746E522476313D009BD539 /* String+Extension.swift in Sources */,
 				AF9FC22B24721A5000A59641 /* GradientImageView.swift in Sources */,
 				AF9FC22D24721A7A00A59641 /* UIColo+Hex.swift in Sources */,
 				AF746E4124739AAF009BD539 /* ProfilePropertyName.swift in Sources */,

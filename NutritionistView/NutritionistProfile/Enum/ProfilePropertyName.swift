@@ -9,11 +9,11 @@
 import Foundation
 
 enum ProfilePropertyName: String, CaseIterable {
-    case Email
-    case Phone
-    case Schdule
-    case Adress
-    case Country
-    case City
+    case email
+    case phone
+    case schdule
+    case adress
+    case country
+    case city
 }
 
